@@ -192,7 +192,7 @@ type ScreenProps =
 
 function InviteScreen(props: ScreenProps) {
   return (
-    <AppScreen className="w-full">
+    <AppScreen className="w-full" color="">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
         <AppScreen.Title>Invite people</AppScreen.Title>
         <AppScreen.Subtitle>
@@ -228,7 +228,7 @@ function InviteScreen(props: ScreenProps) {
 
 function StocksScreen(props: ScreenProps) {
   return (
-    <AppScreen className="w-full">
+    <AppScreen className="w-full" color="">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
         <AppScreen.Title>Stocks</AppScreen.Title>
         <AppScreen.Subtitle>March 9, 2022</AppScreen.Subtitle>
@@ -330,7 +330,7 @@ function StocksScreen(props: ScreenProps) {
 
 function InvestScreen(props: ScreenProps) {
   return (
-    <AppScreen className="w-full">
+    <AppScreen className="w-full" color="">
       <MotionAppScreenHeader {...(props.animated ? headerAnimation : {})}>
         <AppScreen.Title>Buy $LA</AppScreen.Title>
         <AppScreen.Subtitle>
