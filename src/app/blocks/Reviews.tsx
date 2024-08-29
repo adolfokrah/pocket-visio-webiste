@@ -6,7 +6,7 @@ import { useInView } from 'framer-motion'
 import Text from 'visio-cms-lib/Text'
 import { Container } from '@/components/Container'
 import { Block, Color } from 'visio-cms-lib/types'
-import { getProjectMode } from 'visio-cms-lib'
+import { getColor, getProjectMode } from 'visio-cms-lib'
 import List from 'visio-cms-lib/List'
 interface Review {
   title: string
@@ -280,6 +280,7 @@ const Reviews: Block<ReviewsProps> = ({
   reviews,
   color,
 }) => {
+  const colorHex = getColor(color)
   return (
     <section
       id="reviews"
@@ -307,7 +308,7 @@ const Reviews: Block<ReviewsProps> = ({
         <ReviewGrid
           reviews={reviews}
           pageBlockId={pageBlockId}
-          color={color.colorHex}
+          color={colorHex}
         />
       </Container>
     </section>

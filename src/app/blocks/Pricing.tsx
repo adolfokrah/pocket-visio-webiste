@@ -10,6 +10,7 @@ import { Logomark } from '@/components/Logo'
 import { Block, Color } from 'visio-cms-lib/types'
 import Text from 'visio-cms-lib/Text'
 import List from 'visio-cms-lib/List'
+import { getColor } from 'visio-cms-lib'
 
 function CheckIcon(
   props: React.ComponentPropsWithoutRef<'svg'> & { fill: string },
@@ -223,6 +224,8 @@ const Pricing: Block<PricingProps> = ({
     'Monthly',
   )
 
+  const colorHex = getColor(color)
+
   return (
     <section
       id="pricing"
@@ -274,7 +277,7 @@ const Pricing: Block<PricingProps> = ({
             </RadioGroup>
             <div
               aria-hidden="true"
-              style={{ backgroundColor: color.colorHex }}
+              style={{ backgroundColor: colorHex }}
               className={clsx(
                 'pointer-events-none absolute inset-0 z-10 grid grid-cols-2 overflow-hidden rounded-lg bg-cyan-500 transition-all duration-300',
                 activePeriod === 'Monthly'
@@ -309,7 +312,7 @@ const Pricing: Block<PricingProps> = ({
               activePeriod={activePeriod}
               index={index}
               pageBlockId={pageBlockId}
-              color={color.colorHex}
+              color={colorHex}
             />
           )}
         />

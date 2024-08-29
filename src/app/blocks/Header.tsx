@@ -14,7 +14,7 @@ import Text from 'visio-cms-lib/Text'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { NavLinks } from '@/components/NavLinks'
-import { getLink, List } from 'visio-cms-lib'
+import { getColor, getLink, List } from 'visio-cms-lib'
 import Image from 'next/image'
 
 function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -70,7 +70,7 @@ export interface HeaderProps {
     variant: 'solid' | 'outline'
     className: string
   }[]
-  logoColor?: Color
+  logoColor: Color
 }
 
 const Header: Block<HeaderProps> = ({
@@ -84,7 +84,7 @@ const Header: Block<HeaderProps> = ({
       <nav>
         <Container className="relative z-50 flex justify-between py-8">
           <div className="relative z-10 flex items-center gap-16">
-            <Logo className="h-10 w-auto" fill={logoColor?.colorHex} />
+            <Logo className="h-10 w-auto" fill={getColor(logoColor)} />
             <NavLinks navLinks={navLinks} pageBlockId={pageBlockId} />
           </div>
           <div className="flex items-center gap-6">
@@ -215,6 +215,7 @@ Header.Schema = {
     },
   ],
   defaultPropValues: {
+    logoColor: { colorHex: '#000000', colorName: 'black', id: 'black' },
     navLinks: [
       { label: 'Features', href: '/#features' },
       { label: 'Reviews', href: '/#reviews' },

@@ -8,11 +8,9 @@ import { Logomark } from '@/components/Logo'
 import { NavLinks } from '@/components/NavLinks'
 import { Block, Color, MediaFile } from 'visio-cms-lib/types'
 import Text from 'visio-cms-lib/Text'
-import List from 'visio-cms-lib/List'
 import VisioImage from 'visio-cms-lib/Image'
 import { HeaderProps } from './Header'
-import { getProjectMode } from 'visio-cms-lib'
-import clsx from 'clsx'
+import { getColor, getProjectMode } from 'visio-cms-lib'
 
 function QrCodeBorder(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -56,6 +54,7 @@ const Footer: Block<FooterProps> = ({
   color,
 }) => {
   const isBuilderMode = getProjectMode() === 'BUILDER'
+  const colorHex = getColor(color)
   return (
     <footer className="border-t border-gray-200">
       <Container>
@@ -64,7 +63,7 @@ const Footer: Block<FooterProps> = ({
             <div className="flex items-center text-gray-900">
               <Logomark
                 className="h-10 w-10 flex-none fill-cyan-500"
-                style={{ fill: color.colorHex }}
+                style={{ fill: colorHex }}
               />
               <div className="ml-4">
                 <p className="text-base font-semibold">
@@ -99,7 +98,7 @@ const Footer: Block<FooterProps> = ({
                 className={
                   'absolute inset-0 hidden h-full w-full transition-colors group-hover:block'
                 }
-                style={{ stroke: color.colorHex }}
+                style={{ stroke: colorHex }}
               />
 
               <VisioImage
@@ -153,7 +152,7 @@ const Footer: Block<FooterProps> = ({
               type={isBuilderMode ? 'button' : 'submit'}
               color="cyan"
               className="ml-4 flex-none"
-              style={{ backgroundColor: color.colorHex }}
+              style={{ backgroundColor: colorHex }}
             >
               <span className="hidden lg:inline">
                 <Text

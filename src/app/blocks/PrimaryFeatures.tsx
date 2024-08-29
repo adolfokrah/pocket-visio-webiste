@@ -20,6 +20,7 @@ import List from 'visio-cms-lib/List'
 import VisioImage from 'visio-cms-lib/Image'
 import { Block, Color, MediaFile } from 'visio-cms-lib/types'
 import Image from 'next/image'
+import { getColor } from 'visio-cms-lib'
 
 const MotionAppScreenHeader = motion(AppScreen.Header)
 const MotionAppScreenBody = motion(AppScreen.Body)
@@ -81,9 +82,9 @@ type ScreenProps =
       custom: CustomAnimationProps
       children: React.ReactNode
     }
-  | { animated?: false;}
+  | { animated?: false }
 
-function Screen(props: ScreenProps & {color: string}) {
+function Screen(props: ScreenProps & { color: string }) {
   return (
     <AppScreen className="w-full" color={props.color}>
       <MotionAppScreenBody
@@ -393,6 +394,7 @@ const PrimaryFeatures: Block<PrimaryFeatures> = ({
   features,
   color,
 }) => {
+  const colorHex = getColor(color)
   return (
     <section
       id="features"
@@ -423,14 +425,14 @@ const PrimaryFeatures: Block<PrimaryFeatures> = ({
         <FeaturesMobile
           features={features}
           pageBlockId={pageBlockId}
-          color={color.colorHex}
+          color={colorHex}
         />
       </div>
       <Container className="hidden md:mt-20 md:block">
         <FeaturesDesktop
           features={features}
           pageBlockId={pageBlockId}
-          color={color.colorHex}
+          color={colorHex}
         />
       </Container>
     </section>
