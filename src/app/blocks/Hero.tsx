@@ -9,7 +9,7 @@ import { PhoneFrame } from '@/components/PhoneFrame'
 import { Block, Color, MediaFile } from 'visio-cms-lib/types'
 import List from 'visio-cms-lib/List'
 import VisioImage from 'visio-cms-lib/Image'
-import { getColor } from 'visio-cms-lib'
+import { getColor } from 'visio-cms-lib/utils'
 
 function BackgroundIllustration(
   props: React.ComponentPropsWithoutRef<'div'> & { color: string },

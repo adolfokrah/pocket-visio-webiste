@@ -10,7 +10,7 @@ import { Logomark } from '@/components/Logo'
 import { Block, Color } from 'visio-cms-lib/types'
 import Text from 'visio-cms-lib/Text'
 import List from 'visio-cms-lib/List'
-import { getColor } from 'visio-cms-lib'
+import { getColor } from 'visio-cms-lib/utils'
 
 function CheckIcon(
   props: React.ComponentPropsWithoutRef<'svg'> & { fill: string },

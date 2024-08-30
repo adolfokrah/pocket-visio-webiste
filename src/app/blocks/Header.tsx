@@ -14,8 +14,8 @@ import Text from 'visio-cms-lib/Text'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { NavLinks } from '@/components/NavLinks'
-import { getColor, getLink, List } from 'visio-cms-lib'
-import Image from 'next/image'
+import { getColor, getLink, getParams } from 'visio-cms-lib/utils'
+import List from 'visio-cms-lib/List'
 
 function MenuIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -79,6 +79,7 @@ const Header: Block<HeaderProps> = ({
   pageBlockId = '',
   logoColor,
 }) => {
+  const params = getParams<{ locale: string }>()
   return (
     <header>
       <nav>
@@ -232,6 +233,13 @@ Header.Schema = {
         label: 'New Link',
         href: '/new-page',
       },
+      sideEditingProps: [
+        {
+          propName: 'href',
+          type: 'link',
+          label: 'Link',
+        },
+      ],
     },
     {
       propName: 'buttons',

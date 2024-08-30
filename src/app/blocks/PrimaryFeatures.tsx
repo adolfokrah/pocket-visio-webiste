@@ -20,7 +20,7 @@ import List from 'visio-cms-lib/List'
 import VisioImage from 'visio-cms-lib/Image'
 import { Block, Color, MediaFile } from 'visio-cms-lib/types'
 import Image from 'next/image'
-import { getColor } from 'visio-cms-lib'
+import { getColor } from 'visio-cms-lib/utils'
 
 const MotionAppScreenHeader = motion(AppScreen.Header)
 const MotionAppScreenBody = motion(AppScreen.Body)

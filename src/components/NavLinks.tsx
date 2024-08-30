@@ -6,6 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { HeaderProps } from '../app/blocks/Header'
 import List from 'visio-cms-lib/List'
 import Text from 'visio-cms-lib/Text'
+import { getLink } from 'visio-cms-lib'
 
 export function NavLinks({
   navLinks,
@@ -27,7 +28,7 @@ export function NavLinks({
         return (
           <Link
             key={label}
-            href={`${href}.${index}`}
+            href={getLink(href || '#')}
             className="relative -mx-3 -my-2 inline-block rounded-lg px-3 py-2 text-sm text-gray-700 transition-colors delay-150 hover:text-gray-900 hover:delay-0"
             onMouseEnter={() => {
               if (timeoutRef.current) {

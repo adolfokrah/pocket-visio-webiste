@@ -10,7 +10,7 @@ import { Block, Color, MediaFile } from 'visio-cms-lib/types'
 import Text from 'visio-cms-lib/Text'
 import VisioImage from 'visio-cms-lib/Image'
 import { HeaderProps } from './Header'
-import { getColor, getProjectMode } from 'visio-cms-lib'
+import { getColor, getProjectMode } from 'visio-cms-lib/utils'
 
 function QrCodeBorder(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (

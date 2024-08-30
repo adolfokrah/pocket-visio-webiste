@@ -6,7 +6,7 @@ import { useInView } from 'framer-motion'
 import Text from 'visio-cms-lib/Text'
 import { Container } from '@/components/Container'
 import { Block, Color } from 'visio-cms-lib/types'
-import { getColor, getProjectMode } from 'visio-cms-lib'
+import { getColor, getProjectMode } from 'visio-cms-lib/utils'
 import List from 'visio-cms-lib/List'
 interface Review {
   title: string
