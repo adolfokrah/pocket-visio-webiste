@@ -1,3 +1,4 @@
+'use client'
 import { useId } from 'react'
 import Image from 'next/image'
 import Text from 'visio-cms-lib/Text'
@@ -124,7 +125,6 @@ const Hero: Block<HeroProps> = ({
                 propName={'title'}
                 pageBlockId={pageBlockId}
                 defaultValue={title}
-                allowedControls={['bold', 'italic', 'underline', 'text-color']}
               />
             </h1>
             <p className="mt-6 text-lg text-gray-600">
@@ -132,7 +132,6 @@ const Hero: Block<HeroProps> = ({
                 propName={'subTitle'}
                 pageBlockId={pageBlockId}
                 defaultValue={subTitle}
-                allowedControls={['bold', 'italic', 'underline', 'text-color']}
               />
             </p>
             <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">

@@ -28,6 +28,7 @@ export default async function Page({
       projectConfiguration={data.projectConfiguration}
       pageBlocks={data.pageBlocks}
       params={data.params}
+      pages={data.pages}
     />
   )
 }

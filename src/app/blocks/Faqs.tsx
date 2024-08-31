@@ -1,3 +1,4 @@
+'use client'
 import { Container } from '@/components/Container'
 import { Block } from 'visio-cms-lib/types'
 import Text from 'visio-cms-lib/Text'
@@ -37,7 +38,6 @@ const Faqs: Block<Faq> = ({ title, description, faqs, pageBlockId = '' }) => {
               defaultValue={description}
               propName="description"
               pageBlockId={pageBlockId}
-              allowedControls={['underline', 'text-color', 'bold', 'link']}
             />
           </p>
         </div>

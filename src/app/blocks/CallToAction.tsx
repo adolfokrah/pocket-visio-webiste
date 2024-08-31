@@ -1,4 +1,4 @@
-import { AppStoreLink } from '@/components/AppStoreLink'
+'use client'
 import { CircleBackground } from '@/components/CircleBackground'
 import { Container } from '@/components/Container'
 import Text from 'visio-cms-lib/Text'

@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { HeaderProps } from '../app/blocks/Header'
 import List from 'visio-cms-lib/List'
 import Text from 'visio-cms-lib/Text'
-import { getLink } from 'visio-cms-lib'
+import { getLink } from 'visio-cms-lib/utils'
 
 export function NavLinks({
   navLinks,

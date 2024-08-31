@@ -408,7 +408,6 @@ const PrimaryFeatures: Block<PrimaryFeatures> = ({
               propName={'title'}
               pageBlockId={pageBlockId}
               defaultValue={title}
-              allowedControls={['bold', 'italic', 'underline', 'text-color']}
             />
           </h2>
           <p className="mt-2 text-lg text-gray-400">
@@ -416,7 +415,6 @@ const PrimaryFeatures: Block<PrimaryFeatures> = ({
               propName={'subTitle'}
               pageBlockId={pageBlockId}
               defaultValue={subTitle}
-              allowedControls={['bold', 'italic', 'underline', 'text-color']}
             />
           </p>
         </div>

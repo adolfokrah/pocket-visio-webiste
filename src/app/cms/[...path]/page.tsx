@@ -1,12 +1,14 @@
 'use client'
-import { Cms } from 'visio-cms-lib'
+import Cms from 'visio-cms-lib/Cms'
 import '@/node_modules/visio-cms-lib/dist/lib.css'
 import blocks from '../../blocks'
 
-export default function Page() {
+export default function Page({ params }: { params: { path: string[] } }) {
+  const { path } = params
   return (
     <Cms
       blocks={blocks}
+      path={`/cms/${path.join('/')}`}
       allowImageTransformation={false}
       supportedLanguages={[
         {

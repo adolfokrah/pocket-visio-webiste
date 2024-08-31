@@ -8,6 +8,7 @@ export default function PageContent({
   pageBlocks,
   projectConfiguration,
   params,
+  pages,
 }: PageData) {
   return (
     <LivePage
@@ -19,6 +20,7 @@ export default function PageContent({
         blocks,
       }}
       params={params}
+      pages={pages}
     />
   )
 }

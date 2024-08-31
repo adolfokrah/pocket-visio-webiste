@@ -1,5 +1,4 @@
-import { useId } from 'react'
-
+'use client'
 import { Container } from '@/components/Container'
 import { Block, MediaFile } from 'visio-cms-lib/types'
 import Text from 'visio-cms-lib/Text'
