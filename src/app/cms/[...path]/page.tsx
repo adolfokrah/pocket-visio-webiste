@@ -15,6 +15,10 @@ export default function Page({ params }: { params: { path: string[] } }) {
           language: 'English',
           locale: 'en-us',
         },
+        {
+          language: 'German',
+          locale: 'de',
+        },
       ]}
       defaultLanguage={{
         language: 'English',
