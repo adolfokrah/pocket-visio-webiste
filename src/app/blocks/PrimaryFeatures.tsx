@@ -141,7 +141,7 @@ function FeaturesDesktop({
           pageBlockId={pageBlockId}
           propName="features"
           defaultPropValues={features}
-          listItemClassName="tw-mt-2"
+          listItemClassName="mt-2"
           renderComponent={(feature, featureIndex) => (
             <div
               key={feature.name}
