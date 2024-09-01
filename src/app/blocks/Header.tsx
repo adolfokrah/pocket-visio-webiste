@@ -150,7 +150,6 @@ const Header: Block<HeaderProps> = ({
                             pageBlockId={pageBlockId}
                             propName="buttons"
                             className="mt-8 flex flex-col gap-4"
-                            component="div"
                             defaultPropValues={buttons || []}
                             renderComponent={(
                               { label, href, variant },
