@@ -61,6 +61,7 @@ const SecondaryFeatures: Block<SecondaryFeaturesProps> = ({
                   propName={`secondaryFeatures.${index}.icon`}
                   defaultValue={icon}
                   wrapperClassName="h-10 w-10 bg-gray-100 relative"
+                  fallbackImage="https://i0.wp.com/ourscene.org/wp-content/uploads/2022/01/placeholder-2.png?fit=1200%2C800&ssl=1&w=640"
                   renderImage={(props) => (
                     <Image
                       src={props.imagePublicUrl}

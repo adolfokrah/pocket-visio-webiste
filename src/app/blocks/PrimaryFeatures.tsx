@@ -140,8 +140,8 @@ function FeaturesDesktop({
         <List
           pageBlockId={pageBlockId}
           propName="features"
-          component=""
           defaultPropValues={features}
+          listItemClassName="tw-mt-2"
           renderComponent={(feature, featureIndex) => (
             <div
               key={feature.name}
@@ -171,7 +171,10 @@ function FeaturesDesktop({
                   )}
                 />
 
-                <Tab className="text-left ui-not-focus-visible:outline-none">
+                <Tab
+                  className="text-left ui-not-focus-visible:outline-none"
+                  aria-label="Name"
+                >
                   <span className="absolute inset-0 rounded-2xl" />
                 </Tab>
                 <h3 className="mt-6 text-lg font-semibold text-white">

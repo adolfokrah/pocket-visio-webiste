@@ -9,7 +9,9 @@ export default function PageContent({
   projectConfiguration,
   params,
   pages,
-}: PageData) {
+}: Omit<PageData, 'projectConfiguration'> & {
+  projectConfiguration: Omit<PageData['projectConfiguration'], 'scripts'>
+}) {
   return (
     <LivePage
       allowImageTransformation={false}

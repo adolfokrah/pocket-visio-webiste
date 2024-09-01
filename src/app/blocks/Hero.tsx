@@ -183,6 +183,7 @@ const Hero: Block<HeroProps> = ({
                   pageBlockId={pageBlockId}
                   propName={`features.${index}`}
                   wrapperClassName="relative"
+                  fallbackImage="https://i0.wp.com/ourscene.org/wp-content/uploads/2022/01/placeholder-2.png?fit=1200%2C800&ssl=1&w=640"
                   renderImage={(logo) => (
                     <Image
                       src={logo.imagePublicUrl}

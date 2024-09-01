@@ -4,7 +4,7 @@ import { getPageBlocks, getPageMetaData } from 'visio-cms-lib/utils'
 import PageContent from '../../page-content'
 import NotFound from '@/src/app/not-found'
 import type { Metadata } from 'next'
-
+import Script from 'next/script'
 type PageProps = {
   params: { slug: string[]; locale: string }
 }
@@ -48,12 +48,24 @@ export default async function Page({ params }: PageProps) {
 
   if (!data) return null
 
+  const { scripts, ...projectConfiguration } = data.projectConfiguration
   return (
-    <PageContent
-      projectConfiguration={data.projectConfiguration}
-      pageBlocks={data.pageBlocks}
-      params={data.params}
-      pages={data.pages}
-    />
+    <>
+      <Script
+        id="script-head"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: `${scripts.head}` }}
+      />
+      <Script
+        id="script-body"
+        dangerouslySetInnerHTML={{ __html: `${scripts.body}` }}
+      />
+      <PageContent
+        projectConfiguration={{ ...projectConfiguration }}
+        pageBlocks={data.pageBlocks}
+        params={data.params}
+        pages={data.pages}
+      />
+    </>
   )
 }
