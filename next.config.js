@@ -12,6 +12,11 @@ const nextConfig = {
         hostname: 'urhvrfatpmdbwttotlwc.supabase.co',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '**',
+      },
     ],
   },
 }
